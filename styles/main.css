@@ -1,0 +1,519 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure, fieldset):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+  /**
+    Плавный скролл
+   */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Убирает серую подсветку при тапе на мобильных устройствах (iOS/Android)
+ */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут fill со значением 'none' или начинается с 'url')
+ */
+:where([fill]:not([fill=none],
+[fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут stroke со значением 'none')
+ */
+:where([stroke]:not([stroke=none],
+[stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-gray: #E7E7E7;
+  --color-blue: #2600FF;
+  --color-blue-10: #99CCFF;
+  --color-blue-15: #B7D7F7;
+  --color-blue-20: #D9ECFF;
+  --color-accent: #007FFF;
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-accent: 'Rubik Doodle Triangles', sans-serif;
+  --container-width-main: 107.5rem;
+  --container-width-secondary: 70rem;
+  --container-padding-x: 1rem;
+  --transition-duration: 0.2s;
+}
+
+.container-main {
+  max-width: calc(var(--container-width-main) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.container-secondary {
+  max-width: calc(var(--container-width-secondary) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 90.06125rem) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 90.06125rem) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+  display: flex;
+  font-family: var(--font-family-base);
+  letter-spacing: 0em;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  padding-top: 11.9375rem;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 h5,
+.h5,
+h6, .h6,
+.h2-accent,
+.h3-light,
+.h6-accent {
+  font-family: var(--font-family-base);
+}
+
+h1, .h1 {
+  font-size: clamp(1rem, -0.3382352941rem + 5.4901960784vw, 6.25rem);
+  line-height: 1.2;
+}
+
+h2, .h2, .h2-accent {
+  font-size: clamp(1rem, 0.4583333333rem + 2.2222222222vw, 3.125rem);
+  line-height: 1.2;
+}
+
+h3, .h3, .h3-light {
+  font-size: clamp(1rem, 0.6176470588rem + 1.568627451vw, 2.5rem);
+  line-height: 1.2;
+}
+
+h4, .h4 {
+  font-size: clamp(1rem, 0.6973039216rem + 1.2418300654vw, 2.1875rem);
+  line-height: 1.2;
+}
+
+h5, .h5 {
+  font-size: clamp(1rem, 0.7769607843rem + 0.9150326797vw, 1.875rem);
+  line-height: 1.2;
+}
+
+h6, .h6, .h6-accent {
+  font-size: clamp(1rem, 0.8406862745rem + 0.6535947712vw, 1.625rem);
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  color: var(--color-light);
+  font-weight: 600;
+}
+
+h2, .h2 {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.h2-accent {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+h3, .h3 {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.h3-light {
+  color: var(--color-light);
+  font-weight: 600;
+}
+
+h4, .h4 {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+h5, .h5 {
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+h6, .h6 {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.h6-accent {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: --color-accent;
+}
+@media (any-hover: hover) {
+  a:hover {
+    color: var(--color-blue);
+  }
+}
+@media (any-hover: none) {
+  a:active {
+    color: var(--color-blue);
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 0.125rem dashed var(--color-dark);
+  outline-offset: 0.25rem;
+  transition-duration: 0s !important;
+}
+
+a[aria-label],
+button[aria-label] {
+  position: relative;
+}
+a[aria-label]::before,
+button[aria-label]::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  aspect-ratio: 1;
+  content: "";
+}
+
+.logo {
+  max-width: clamp(0.625rem, -0.4105392157rem + 4.2483660131vw, 4.6875rem);
+}
+
+.header {
+  position: fixed;
+  top: 1.5625rem;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header__body {
+  max-width: 107.5rem;
+  height: 6.25rem;
+  border-radius: 3.75rem;
+  margin: 0 auto;
+  padding-block: 0rem;
+  background-color: var(--color-blue-20);
+}
+.header__body-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.03125rem;
+  padding-right: 4.09375rem;
+  padding-left: 0.8125rem;
+}
+@media (width > 90.06125rem) {
+  .header__overlay {
+    display: contents;
+  }
+}
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  column-gap: 3.125rem;
+}
+.header__menu-link {
+  padding-block: 2rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: var(--color-accent);
+}
+@media (any-hover: hover) {
+  .header__menu-link:hover {
+    background-color: var(--color-blue-15);
+  }
+}
+@media (any-hover: none) {
+  .header__menu-link:active {
+    background-color: var(--color-blue-15);
+  }
+}
+.header__menu-link--oproekte {
+  padding-inline: 1.75rem;
+}
+.header__menu-link--kudashodit {
+  padding-inline: 1.46875rem;
+}
+.header__menu-link--novosti {
+  padding-inline: 0.9375rem;
+}
+.header__menu-link--dostoprimechatelnosti {
+  padding-inline: 1.40625rem;
+}
+.header__menu-link--marshruty {
+  padding-inline: 1.4375rem;
+}
+.header__menu-link--karty {
+  padding-inline: 0.5rem;
+}
+
+.footer__body {
+  padding-block: clamp(0.625rem, 0.2426470588rem + 1.568627451vw, 2.125rem);
+}
+.footer__menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  column-gap: clamp(0.625rem, -3.9154411765rem + 18.6274509804vw, 18.4375rem);
+}
+
+/*# sourceMappingURL=main.css.map */

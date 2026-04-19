@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.footer {
+    &__body {
+        padding-block: fluid(34);
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        column-gap: fluid(295);
+    }
+}

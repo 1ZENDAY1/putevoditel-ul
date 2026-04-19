@@ -1,0 +1,22 @@
+# Зависимости (САМОЕ ВАЖНОЕ)
+node_modules/
+package-lock.json
+package.json
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
+npm-debug.log*
+
+# Настройки IDE
+.vscode/
+.idea/
+
+# Временные файлы SASS
+.sass-cache/
+*.css.map
+*.scss.map
+
