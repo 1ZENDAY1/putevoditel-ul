@@ -507,13 +507,104 @@ button[aria-label]::before {
 }
 
 .footer__body {
+  background-color: var(--color-blue-10);
   padding-block: clamp(0.625rem, 0.2426470588rem + 1.568627451vw, 2.125rem);
 }
 .footer__menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: start;
-  column-gap: clamp(0.625rem, -3.9154411765rem + 18.6274509804vw, 18.4375rem);
+  column-gap: clamp(0.625rem, -1.1115196078rem + 7.1241830065vw, 7.4375rem);
+  padding-inline: 6.25rem;
+}
+.footer__menu-column {
+  display: flex;
+  flex-direction: column;
+  max-width: 37.0625rem;
+  align-items: flex-start;
+}
+.footer__logo-wrapper {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.footer__logo {
+  flex-shrink: 0;
+}
+.footer__brand-text {
+  color: var(--color-light);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.footer__design-name {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 1.375rem;
+}
+.footer__donate {
+  display: inline-block;
+  width: fit-content;
+  background-color: var(--color-accent);
+  border-radius: 0.625rem;
+  color: var(--color-light);
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-bottom: 2.8125rem;
+  padding: 1.125rem 2.8125rem;
+}
+@media (any-hover: hover) {
+  .footer__donate:hover {
+    background-color: var(--color-light);
+    color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .footer__donate:active {
+    background-color: var(--color-light);
+    color: var(--color-accent);
+  }
+}
+.footer__copyright {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.footer__menu-column--right {
+  display: flex;
+  flex-direction: column;
+  max-width: 51.5rem;
+}
+.footer__contacts-to-top {
+  display: flex;
+  gap: 3.125rem;
+}
+.footer__contacts {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.footer__to-top {
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 31.25rem;
+  width: 4.375rem;
+  height: 4.375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-accent);
+  font-size: 2.1875rem;
+  font-weight: 600;
+}
+@media (any-hover: hover) {
+  .footer__to-top:hover {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+}
+@media (any-hover: none) {
+  .footer__to-top:active {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

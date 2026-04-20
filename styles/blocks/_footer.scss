@@ -2,6 +2,7 @@
 
 .footer {
     &__body {
+        background-color: var(--color-blue-10);
         padding-block: fluid(34);
     }
 
@@ -9,6 +10,93 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: start;
-        column-gap: fluid(295);
+        column-gap: fluid(119);
+        padding-inline: rem(100);
+    }
+
+    &__menu-column {
+        display: flex;
+        flex-direction: column;
+        max-width: rem(593);
+        align-items: flex-start;
+    }
+
+    &__logo-wrapper {
+        display: flex;
+        gap: rem(10);
+        align-items: center;
+        margin-bottom: rem(20);
+    }
+
+    &__logo {
+        flex-shrink: 0;
+    }
+
+    &__brand-text {
+        color: var(--color-light);
+        font-weight: 600;
+        font-size: rem(24);
+    }
+
+    &__design-name {
+        font-weight: 400;
+        font-size: rem(20);
+        margin-bottom: rem(22);
+    }
+
+    &__donate {
+        display: inline-block;
+        width: fit-content;
+        background-color: var(--color-accent);
+        border-radius: rem(10);
+        color: var(--color-light);
+        font-weight: 700;
+        font-size: rem(30);
+        margin-bottom: rem(45);
+        padding: rem(18) rem(45); 
+
+        @include hover {
+            background-color: var(--color-light);
+            color: var(--color-accent);
+        }
+    }
+
+    &__copyright {
+        font-weight: 400;
+        font-size: rem(20);
+    }
+
+    &__menu-column--right {
+        display: flex;
+        flex-direction: column;
+        max-width: rem(824);
+    }
+
+    &__contacts-to-top {
+        display: flex;
+        gap: rem(50);
+    }
+
+    &__contacts {
+        font-weight: 400;
+        font-size: rem(20);
+    }
+
+    &__to-top {
+        background-color: var(--color-light);
+        border: none;
+        border-radius: rem(500);
+        width: rem(70);
+        height: rem(70);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        color: var(--color-accent);
+        font-size: rem(35);
+        font-weight: 600;
+        @include hover {
+            background-color: var(--color-accent);
+            color: var(--color-light);
+        }
     }
 }
