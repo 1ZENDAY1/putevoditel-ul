@@ -514,7 +514,7 @@ button[aria-label]::before {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: start;
-  column-gap: clamp(0.625rem, -1.1115196078rem + 7.1241830065vw, 7.4375rem);
+  column-gap: clamp(0.625rem, -0.4264705882rem + 4.3137254902vw, 4.75rem);
   padding-inline: 6.25rem;
 }
 .footer__menu-column {
@@ -605,6 +605,56 @@ button[aria-label]::before {
     background-color: var(--color-accent);
     color: var(--color-light);
   }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 37.5rem;
+  margin-top: -11.9375rem;
+}
+.hero__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.25s ease-in-out;
+}
+.hero__slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.hero__title {
+  position: absolute;
+  top: 36.25rem;
+  left: 6.25rem;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

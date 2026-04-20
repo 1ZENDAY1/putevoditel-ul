@@ -1,0 +1,59 @@
+@use '../globals' as *;
+@use '../helpers' as *;
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;           
+    min-height: rem(600);
+    margin-top: -11.9375rem;
+    //margin-bottom: rem(40);
+    
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1.25s ease-in-out;
+        
+        &.active {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  // картинка покрывает весь блок
+        display: block;
+    }
+    
+    &__content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__title {
+    position: absolute;
+    top: rem(580);
+    left: rem(100);
+    margin: 0;
+    }
+}
