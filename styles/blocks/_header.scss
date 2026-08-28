@@ -83,6 +83,10 @@
     }
 
     @media (width <= rem(1600)) {
+        &__body {
+            width: calc(100% - rem(160));
+        }
+
         &__body-inner {
             padding-right: rem(24);
             padding-left: rem(10);

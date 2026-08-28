@@ -528,6 +528,9 @@ button[aria-label]::before {
   padding-inline: 0.5rem;
 }
 @media (width <= 100rem) {
+  .header__body {
+    width: calc(100% - 10rem);
+  }
   .header__body-inner {
     padding-right: 1.5rem;
     padding-left: 0.625rem;
