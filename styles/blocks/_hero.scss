@@ -51,31 +51,9 @@
     }
 
     &__title {
-        position: absolute;
-        left: clamp(1rem, 5.2vw, 6.25rem);
-        bottom: clamp(2rem, 10vh, 7rem);
-        max-width: min(85vw, 48rem);
-        margin: 0;
-    }
-
-    @include tablet {
-        min-height: rem(520);
-        margin-top: -5.75rem;
-
-        &__title {
-            max-width: 80vw;
-        }
-    }
-
-    @include mobile {
-        height: min(100svh, rem(760));
-        min-height: rem(460);
-        margin-top: -4.75rem;
-
-        &__title {
-            font-size: clamp(2.25rem, 10vw, 3.5rem);
-            line-height: 1.05;
-            bottom: rem(32);
-        }
+    position: absolute;
+    top: rem(580);
+    left: rem(100);
+    margin: 0;
     }
 }
