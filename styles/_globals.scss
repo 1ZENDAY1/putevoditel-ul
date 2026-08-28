@@ -3,6 +3,8 @@
 body {
     @include fluid-text(24, 24);
 
+    overflow-x: hidden;
+
     display: flex;
     font-family: var(--font-family-base);
     letter-spacing: 0em;
@@ -10,6 +12,15 @@ body {
     background-color: var(--color-light);
     padding-top: rem(191);
     flex-direction: column;
+
+    @include tablet {
+        padding-top: rem(124);
+    }
+
+    @include mobile {
+        padding-top: rem(94);
+        font-size: rem(16);
+    }
 }
 
 main {
@@ -120,7 +131,7 @@ svg * {
 }
 
 a {
-    color: --color-accent;
+    color: var(--color-accent);
 
     @include hover {
         color: var(--color-blue);
