@@ -83,7 +83,6 @@
     }
 
     &__to-top {
-        flex: 0 0 auto;
         background-color: var(--color-light);
         border: none;
         border-radius: rem(500);
@@ -98,66 +97,6 @@
         @include hover {
             background-color: var(--color-accent);
             color: var(--color-light);
-        }
-    }
-
-    @include tablet {
-        &__menu {
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-            padding-inline: rem(32);
-        }
-
-        &__contacts-to-top {
-            gap: rem(20);
-        }
-
-        &__contacts,
-        &__copyright,
-        &__design-name {
-            font-size: rem(16);
-        }
-
-        &__brand-text {
-            font-size: rem(20);
-        }
-
-        &__donate {
-            font-size: rem(22);
-            padding: rem(14) rem(24);
-        }
-    }
-
-    @include mobile {
-        &__body {
-            padding-block: rem(24);
-        }
-
-        &__menu {
-            display: flex;
-            flex-direction: column;
-            gap: rem(28);
-            padding-inline: rem(16);
-        }
-
-        &__menu-column,
-        &__menu-column--right {
-            max-width: none;
-            width: 100%;
-        }
-
-        &__contacts-to-top {
-            align-items: flex-start;
-        }
-
-        &__contacts {
-            font-size: rem(15);
-            line-height: 1.45;
-        }
-
-        &__to-top {
-            width: rem(52);
-            height: rem(52);
-            font-size: rem(26);
         }
     }
 }
