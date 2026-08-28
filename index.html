@@ -1,184 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Путеводитель по интересным местам Ульяновска: история, маршруты, достопримечательности и практическая информация.">
     <title>Путеводитель по Ульяновску | Главная</title>
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="header__body">
             <div class="header__body-inner container">
-                <a 
-                href="/" 
-                class="header__logo logo"
-                aria-label="Home"
-                title="Home"
-                >
-                <img 
-                    src="./images/logo.svg" 
-                    alt="" 
-                    class="logo__image"
-                    width="75" height="75"
-                >
+                <a href="#top" class="header__logo logo" aria-label="На главную" title="На главную">
+                    <img src="./images/logo.svg" alt="" class="logo__image" width="75" height="75">
                 </a>
-                <nav class="header__menu">
+                <nav class="header__menu" aria-label="Основная навигация">
                     <ul class="header__menu-list">
-                        <li class="header__menu-item">
-                            <a href="/" class="header__menu-link header__menu-link--oproekte">О проекте</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="/" class="header__menu-link header__menu-link--kudashodit">Куда сходить?</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="/" class="header__menu-link header__menu-link--novosti">Новости</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="/" class="header__menu-link header__menu-link--dostoprimechatelnosti">Достопримечательности</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="/" class="header__menu-link header__menu-link--marshruty">Маршруты</a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="/" class="header__menu-link header__menu-link--karty">Карта</a>
-                        </li>
+                        <li class="header__menu-item"><a href="#about" class="header__menu-link header__menu-link--oproekte">О проекте</a></li>
+                        <li class="header__menu-item"><a href="#practical" class="header__menu-link header__menu-link--kudashodit">Куда сходить?</a></li>
+                        <li class="header__menu-item"><a href="#news" class="header__menu-link header__menu-link--novosti">Новости</a></li>
+                        <li class="header__menu-item"><a href="#reasons" class="header__menu-link header__menu-link--dostoprimechatelnosti">Достопримечательности</a></li>
+                        <li class="header__menu-item"><a href="#activities" class="header__menu-link header__menu-link--marshruty">Маршруты</a></li>
+                        <li class="header__menu-item"><a href="#map" class="header__menu-link header__menu-link--karty">Карта</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero">
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero__slider">
-                <div class="hero__slide active">
-                    <img 
-                        src="./images/slide-1.svg" 
-                        alt="Ульяновск достопримечательность"
-                        class="hero__image"
-                        width="1920" 
-                        height="1030"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="hero__slide">
-                    <img 
-                        src="./images/slide-2.svg" 
-                        alt="Ульяновск достопримечательность"
-                        class="hero__image"
-                        width="1920" 
-                        height="1030"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="hero__slide">
-                    <img 
-                        src="./images/slide-3.svg" 
-                        alt="Ульяновск достопримечательность"
-                        class="hero__image"
-                        width="1920" 
-                        height="1030"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="hero__slide">
-                    <img 
-                        src="./images/slide-4.svg" 
-                        alt="Ульяновск достопримечательность"
-                        class="hero__image"
-                        width="1920" 
-                        height="1030"
-                        loading="lazy"
-                    >
-                </div>
-                
-                <div class="hero__slide">
-                    <img 
-                        src="./images/slide-5.svg" 
-                        alt="Ульяновск достопримечательность"
-                        class="hero__image"
-                        width="1920" 
-                        height="1030"
-                        loading="lazy"
-                    >
-                </div>
-                
-                <div class="hero__slide">
-                    <img 
-                        src="./images/slide-6.svg" 
-                        alt="Ульяновск достопримечательность"
-                        class="hero__image"
-                        width="1920" 
-                        height="1030"
-                        loading="lazy"
-                    >
-                </div>                
+                <div class="hero__slide active"><img src="./images/slide-1.svg" alt="Ночной Ульяновск" class="hero__image" width="1920" height="1030"></div>
+                <div class="hero__slide"><img src="./images/slide-2.svg" alt="Панорама Ульяновска" class="hero__image" width="1920" height="1030"></div>
+                <div class="hero__slide"><img src="./images/slide-3.svg" alt="Достопримечательность Ульяновска" class="hero__image" width="1920" height="1030"></div>
+                <div class="hero__slide"><img src="./images/slide-4.svg" alt="Вид на город" class="hero__image" width="1920" height="1030"></div>
+                <div class="hero__slide"><img src="./images/slide-5.svg" alt="Городской пейзаж" class="hero__image" width="1920" height="1030"></div>
+                <div class="hero__slide"><img src="./images/slide-6.svg" alt="Ульяновск с высоты" class="hero__image" width="1920" height="1030"></div>
             </div>
-
             <div class="hero__content container">
-                <h1 class="hero__title">Путеводитель<br>
-                     по Ульяновску
-                </h1>
+                <h1 id="hero-title" class="hero__title">Путеводитель<br>по Ульяновску</h1>
             </div>
         </section>
 
-        <h2>сайт находится в разработке</h2>
+        <div class="content">
+            <section class="content__intro content__container" aria-labelledby="intro-title">
+                <div class="content__intro-copy">
+                    <h2 id="intro-title" class="content__intro-title">Ульяновск: город на Волге, где история встречается с современностью</h2>
+                    <p class="content__intro-text">Ульяновск — живописный город на берегах великой Волги, сочетающий богатое историческое наследие и динамичное развитие. Основанный в 1648 году как крепость Симбирск, он прошёл долгий путь от пограничного форпоста до современного административного центра Ульяновской области.</p>
+                    <div class="content__intro-thumbs">
+                        <img class="content__thumb" src="./images/slide-2.svg" alt="Вид на Волгу" width="600" height="360">
+                        <img class="content__thumb" src="./images/slide-3.svg" alt="Памятник в Ульяновске" width="600" height="360">
+                    </div>
+                </div>
+                <img class="content__media" src="./images/slide-4.svg" alt="Волга и набережная Ульяновска" width="900" height="620">
+            </section>
+
+            <section id="practical" class="content__feature content__container" aria-labelledby="practical-title">
+                <h2 id="practical-title" class="content__feature-title">Практическая информация</h2>
+                <article class="content__feature-card"><img class="content__feature-image" src="./images/slide-5.svg" alt="Аэропорт Ульяновска" width="420" height="250"><h3>Как добраться?</h3><p>Город имеет аэропорт, железнодорожный вокзал и автовокзал.</p></article>
+                <article class="content__feature-card"><img class="content__feature-image" src="./images/slide-6.svg" alt="Городской транспорт" width="420" height="250"><h3>Транспорт</h3><p>Автобусы, трамваи, троллейбусы и маршрутные такси.</p></article>
+                <article class="content__feature-card"><img class="content__feature-image" src="./images/slide-3.svg" alt="Отель в городе" width="420" height="250"><h3>Где остановиться?</h3><p>От советских гостиниц до современных отелей международных сетей.</p></article>
+                <article class="content__feature-card"><img class="content__feature-image" src="./images/slide-2.svg" alt="Осенний пейзаж Ульяновска" width="420" height="250"><h3>Лучшее время для визита</h3><p>Май–сентябрь, когда погода тёплая, а Волга особенно живописна.</p></article>
+            </section>
+
+            <section id="reasons" class="content__reasons content__container" aria-labelledby="reasons-title">
+                <div class="content__reasons-copy">
+                    <h2 id="reasons-title" class="content__section-title">Почему стоит посетить Ульяновск?</h2>
+                    <p class="content__copy"><strong>Ульяновск</strong> — это город, где каждый найдёт что-то своё: любители истории погрузятся в атмосферу старого Симбирска, ценители природы насладятся волжскими пейзажами, а любознательные путешественники откроют для себя авиационную столицу России.</p>
+                    <p class="content__copy"><strong>Уникальное географическое положение</strong><br>Город раскинулся на обоих берегах Волги — самой длинной реки Европы. Два величественных моста соединяют правобережную и левобережную части.</p>
+                    <p class="content__copy"><strong>Богатая история</strong><br>До 1924 года город носил имя Симбирск и был известен как «дворянская столица» Поволжья. Здесь родились и жили выдающиеся личности.</p>
+                    <p class="content__copy"><strong>Природная красота</strong><br>Широкая Волга, живописные набережные, парки и холмистый рельеф создают неповторимый облик города.</p>
+                </div>
+                <img id="map" class="content__map" src="./images/slide-5.svg" alt="Карта расположения Ульяновска" width="900" height="760">
+            </section>
+
+            <section id="activities" class="content__activities content__container" aria-labelledby="activities-title">
+                <h2 id="activities-title" class="content__activities-title">Чем заняться?</h2>
+                <article class="content__activity-card"><img class="content__activity-image" src="./images/slide-4.svg" alt="Прогулка на теплоходе" width="560" height="330"><p><strong>Прокатиться</strong> на теплоходе по Волге (сезон: май–август).</p></article>
+                <article class="content__activity-card"><img class="content__activity-image" src="./images/slide-2.svg" alt="Городской пляж" width="560" height="330"><p><strong>Отдохнуть</strong> на городских пляжах или в пригородном Рыбацком посёлке.</p></article>
+                <article class="content__activity-card"><img class="content__activity-image" src="./images/slide-6.svg" alt="Регата на Волге" width="560" height="330"><p><strong>Принять участие</strong> в регатах, которые ежегодно проводит местный яхт-клуб.</p></article>
+            </section>
+
+            <section id="about" class="content__about content__container" aria-labelledby="about-title">
+                <h2 id="about-title" class="content__section-title content__about-title">О проекте</h2>
+                <div class="content__about-grid">
+                    <div class="content__about-left">
+                        <article class="content__about-card"><h3>Наша миссия</h3><p>Мы создаём удобный и информативный ресурс, который:</p><ul><li><strong>Помогает</strong> туристам спланировать путешествие;</li><li><strong>Открывает</strong> малоизвестные уголки города;</li><li><strong>Сохраняет</strong> и популяризирует историческое наследие Ульяновска;</li><li><strong>Делает</strong> знакомство с городом доступным и увлекательным для каждого.</li></ul></article>
+                        <article class="content__about-card"><h3>Наши цели</h3><ul><li><strong>Повысить</strong> туристическую привлекательность Ульяновска.</li><li><strong>Сделать</strong> историю и культуру города ближе и понятнее.</li><li><strong>Создать</strong> единое информационное пространство для гостей и жителей.</li><li><strong>Поддерживать</strong> развитие локального туризма и малого бизнеса.</li></ul></article>
+                    </div>
+                    <article class="content__about-card content__about-card--accent"><h3>Что вы найдёте на сайте</h3><p>Наш путеводитель объединяет:</p><ul><li><strong>Подробные описания достопримечательностей</strong> — от знаковых памятников до уютных городских уголков;</li><li><strong>Практические рекомендации</strong> — транспорт, проживание, кафе и рестораны;</li><li><strong>Готовые маршруты</strong> для разных типов путешественников;</li><li><strong>Актуальную информацию</strong> о событиях, фестивалях и выставках;</li><li><strong>Фото и видеоматериалы</strong>, позволяющие заранее почувствовать атмосферу города.</li></ul></article>
+                    <article class="content__about-card"><h3>Почему нам можно доверять</h3><p><strong>Проверенные данные</strong><br>Вся информация регулярно обновляется и подтверждается из нескольких источников.</p><p><strong>Пользовательский опыт</strong><br>Структура сайта продумана так, чтобы вы находили нужное за считанные секунды.</p><p><strong>Доступность</strong><br>Путеводитель бесплатен и открыт для всех — от туристов до местных жителей.</p></article>
+                    <article class="content__about-card"><h3>Для кого этот проект</h3><p><strong>Туристы</strong> — планируйте поездку, выбирайте маршруты и не теряйте время на поиск информации.</p><p><strong>Жители Ульяновска</strong> — откройте родной город с новой стороны.</p><p><strong>Школьные группы и учителя</strong> — используйте материалы для образовательных экскурсий.</p><p><strong>Предприниматели</strong> — узнайте о локациях для мероприятий.</p></article>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
         <div class="footer__inner container">
             <div class="footer__body">
-                <nav class="footer__menu">
+                <nav class="footer__menu" aria-label="Навигация в подвале">
                     <div class="footer__menu-column">
-                        <div class="footer__logo-wrapper">
-                            <div class="footer__logo">
-                                <img 
-                                    src="./images/logo.svg" 
-                                    alt="" 
-                                    class="logo__image"
-                                    width="75" height="75"
-                                >
-                            </div>
-                        
-                            <div class="footer__brand-text">
-                                Путеводитель<br>
-                                по Ульяновску
-                            </div>
-                        </div>
-                        
-                        <div class="footer__design-name">
-                            Дизайнер: Михайлов Артём
-                        </div>
-
-                        <a href="https://www.donationalerts.com/r/michailov_artyom" class="footer__donate" target="_blank">Поддержать проект</a>
-
-                        <p class="footer__copyright">© <time datetime="2026">2026</time> Путеводитель по Ульяновску. Все права защищены.</p>
+                        <div class="footer__logo-wrapper"><div class="footer__logo"><img src="./images/logo.svg" alt="" class="logo__image" width="75" height="75"></div><div class="footer__brand-text">Путеводитель<br>по Ульяновску</div></div>
+                        <div class="footer__design-name">Дизайнер: Михайлов Артём</div>
+                        <a href="https://www.donationalerts.com/r/michailov_artyom" class="footer__donate" target="_blank" rel="noreferrer">Поддержать проект</a>
+                        <p class="footer__copyright">© <time datetime="2024">2024</time> Путеводитель по Ульяновску. Все права защищены.</p>
                     </div>
-
-                    <div class="footer__menu-column--right">
-                        <div class="footer__contacts-to-top">
-                            <div class="footer__contacts">
-                                <strong>Свяжитесь с нами</strong><br>
-                                 Мы всегда рады предложениям и отзывам! Если вы хотите:<br>
-                                 — поделиться интересным местом или историей;<br>
-                                 — предложить партнёрство;<br>
-                                 — сообщить об ошибке или обновить информацию,<br>
-                                 Пишите нам на <strong>dearema10art@gmail.com</strong>.<br> 
-                                 или звоните по телефону <strong>8 (953) 987-20-18</strong>.<br>
-                                 <br>
-                                 Спасибо, что выбираете наш путеводитель. <br>
-                                 Пусть ваше путешествие по Ульяновску будет наполнено открытиями!
-                            </div>
-    
-                            <button class="footer__to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                                ↑
-                            </button>
-                         </div>
-                    </div>
+                    <div class="footer__menu-column--right"><div class="footer__contacts-to-top"><div class="footer__contacts"><strong>Свяжитесь с нами</strong><br>Мы всегда рады предложениям и отзывам! Если вы хотите:<br>— поделиться интересным местом или историей;<br>— предложить партнёрство;<br>— сообщить об ошибке или обновить информацию,<br>Пишите нам на <strong>dearema10art@gmail.com</strong>.<br>или звоните по телефону <strong>8 (953) 987-20-18</strong>.<br><br>Спасибо, что выбираете наш путеводитель.<br>Пусть ваше путешествие по Ульяновску будет наполнено открытиями!</div><button class="footer__to-top" type="button" aria-label="Вернуться наверх" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button></div></div>
                 </nav>
             </div>
         </div>
