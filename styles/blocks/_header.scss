@@ -82,6 +82,24 @@
         }
     }
 
+    @media (width <= rem(1600)) {
+        &__body-inner {
+            padding-right: rem(24);
+            padding-left: rem(10);
+        }
+
+        &__menu-list {
+            column-gap: rem(16);
+        }
+
+        &__menu-link {
+            padding-inline: rem(10);
+            padding-block: rem(26);
+            font-size: rem(24);
+            line-height: 1.2;
+        }
+    }
+
     @include tablet {
         top: rem(16);
 
