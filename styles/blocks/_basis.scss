@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.basis {
+    padding-top: fluid(48);
+    padding-bottom: fluid(25);
+    padding-inline: fluid(100);
+
+    
+    &__content {
+        display: flex;
+        gap: rem(14);
+    }
+
+    &__left {
+        flex: 1 1 auto;
+        min-width: 0;
+
+        .basis_title {
+            margin-bottom: rem(23);
+            line-height: 121%;
+        }
+
+        .basis_text {
+            margin-bottom: rem(24);
+            line-height: 140%;  
+        }
+    }
+
+    &__right {
+        flex: 0 0 rem(900);
+        width: rem(900);
+    }
+        
+    &__img-small {
+        display: flex;
+        gap: rem(60);
+    }
+}

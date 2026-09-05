@@ -5,9 +5,10 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 100vh;           
+    height: rem(1030);           
     min-height: rem(600);
     margin-top: -11.9375rem;
+    background: var(--color-dark);
     //margin-bottom: rem(40);
     
     &__slider {
