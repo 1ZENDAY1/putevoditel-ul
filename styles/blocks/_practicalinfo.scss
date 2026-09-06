@@ -1,0 +1,76 @@
+@use '../helpers' as *;
+
+.practicalinfo {
+    padding-bottom: fluid(100);
+    padding-inline: fluid(100);
+
+    &__content {
+        background-color: var(--color-blue-20);
+        border-radius: rem(60);
+
+        .practicalinfo_title {
+            text-align: center;
+            padding-top: rem(25);
+            padding-bottom: rem(30);
+        }
+    }
+
+    &__columns {
+        display: flex;
+        gap: rem(25);
+    }
+
+    &__column1 {
+        padding-left: rem(33);
+        padding-bottom: rem(35);
+
+        .practicalinfo__column1_title {
+            padding-top: rem(20);
+            padding-bottom: rem(10);
+        }
+
+        .practicalinfo__column1_text {
+            line-height: 142%;
+        }
+    }
+
+    &__column2 {
+        padding-bottom: rem(35);
+
+        .practicalinfo__column2_title {
+            padding-top: rem(20);
+            padding-bottom: rem(10);            
+        }
+
+        .practicalinfo__column2_text {
+            line-height: 142%;
+        }
+    }
+
+    &__column3 {
+        padding-bottom: rem(35);
+
+        .practicalinfo__column3_title {
+            padding-top: rem(20);
+            padding-bottom: rem(10);            
+        }
+
+        .practicalinfo__column3_text {
+            line-height: 142%;
+        }
+    }
+
+    &__column4 {
+        padding-bottom: rem(35);
+        padding-right: rem(32);
+
+        .practicalinfo__column4_title {
+            padding-top: rem(20);
+            padding-bottom: rem(10);            
+        }
+
+        .practicalinfo__column4_text {
+            line-height: 142%;
+        }
+    }
+}
