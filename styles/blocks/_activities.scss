@@ -1,0 +1,69 @@
+@use '../helpers' as *;
+
+.activities {
+    padding-bottom: fluid(100);
+    padding-inline: fluid(100);
+
+    &__content {
+        background-color: var(--color-blue-20);
+        border-radius: rem(60);
+
+        .activities_title {
+            text-align: center;
+            padding-top: rem(30);
+            padding-bottom: rem(25);
+        }
+    }
+
+    &__columns {
+        display: flex;
+        gap: rem(50);
+    }
+
+    &__column1 {
+        padding-left: rem(38);
+        padding-bottom: rem(46);
+
+        .activities__column1_text {
+            line-height: 142%;
+            text-align: center;
+            padding-top: rem(25);
+
+            &__accent {
+                font-weight: 500;
+                color: var(--color-accent);
+            }               
+        }
+    }
+
+    &__column2 {
+        padding-bottom: rem(46);
+
+        .activities__column2_text {
+            line-height: 142%;
+            text-align: center;
+            padding-top: rem(25);
+
+            &__accent {
+                font-weight: 500;
+                color: var(--color-accent);
+            }               
+        }
+    }
+
+    &__column3 {
+        padding-bottom: rem(46);
+        padding-right: rem(37);
+
+        .activities__column3_text {
+            line-height: 142%;
+            text-align: center;
+            padding-top: rem(25);
+
+            &__accent {
+                font-weight: 500;
+                color: var(--color-accent);
+            }            
+        }
+    }
+}
