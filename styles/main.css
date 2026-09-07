@@ -748,4 +748,42 @@ button[aria-label]::before {
   line-height: 142%;
 }
 
+.visit {
+  padding-bottom: clamp(0.625rem, 0.3860294118rem + 0.9803921569vw, 1.5625rem);
+  padding-inline: clamp(0.625rem, -0.8088235294rem + 5.8823529412vw, 6.25rem);
+}
+.visit__content {
+  display: flex;
+  gap: 2.1875rem;
+}
+.visit__left {
+  width: 49.0625rem;
+}
+.visit__left .visit_title {
+  line-height: 122%;
+}
+.visit__texts .visit_text1 {
+  padding-top: 2.1875rem;
+  padding-bottom: 1.875rem;
+  line-height: 140%;
+  font-size: 1.4375rem;
+}
+.visit__texts .visit_text2 {
+  padding-top: 0.625rem;
+  padding-bottom: 1.5625rem;
+  line-height: 140%;
+  font-size: 1.4375rem;
+}
+.visit__texts .visit_text3 {
+  padding-top: 0.625rem;
+  padding-bottom: 1.5625rem;
+  line-height: 140%;
+  font-size: 1.4375rem;
+}
+.visit__texts .visit_text4 {
+  padding-top: 0.625rem;
+  line-height: 140%;
+  font-size: 1.4375rem;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.visit {
+    padding-bottom: fluid(25);
+    padding-inline: fluid(100);
+
+    &__content {
+        display: flex;
+        gap: rem(35);
+    }
+
+    &__left {
+        width: rem(785);
+
+        .visit_title {
+            line-height: 122%;
+        }
+    }
+        
+    &__texts {
+        .visit_text1 {
+            padding-top: rem(35);
+            padding-bottom: rem(30);
+            line-height: 140%;
+            font-size: rem(23);
+        }
+
+        .visit_text2 {
+            padding-top: rem(10);
+            padding-bottom: rem(25);
+            line-height: 140%;
+            font-size: rem(23);
+        }
+        
+        .visit_text3 {
+            padding-top: rem(10);
+            padding-bottom: rem(25);
+            line-height: 140%;
+            font-size: rem(23);            
+        }
+
+        .visit_text4 {
+            padding-top: rem(10);
+            line-height: 140%;
+            font-size: rem(23);            
+        }        
+    }
+}
